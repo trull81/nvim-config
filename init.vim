@@ -15,7 +15,7 @@ filetype plugin indent on
 " general option
 set number autoindent smartindent ruler showcmd history=1000
 set noshowmode mouse=a laststatus=2 sw=2 ts=2 tw=80 et incsearch
-set cursorline wildmenu lazyredraw hlsearch
+set cursorline wildmenu lazyredraw hlsearch listchars=eol:$
 
 " folding is a feature to reduce and expand code blocks
 set foldmethod=indent foldlevelstart=10 foldnestmax=10
@@ -38,6 +38,7 @@ autocmd BufWritePre * :%s/\s\+$//ec
 " specific filetype option
 augroup filetype
   autocmd FileType python setlocal ts=4 sw=4
+  autocmd FileType go setlocal ts=8 sw=8
   autocmd FileType markdown setlocal spell
 augroup end
 
