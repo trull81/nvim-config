@@ -1,12 +1,12 @@
-colorscheme koehler
+colorscheme railscasts
 
 " load plugins
 execute pathogen#infect()
 
 " ron is easier to read on vimdiff
-if &diff
-    colorscheme ron
-endif
+"if &diff
+"    colorscheme ron
+"endif
 
 " syntax and indentation
 syntax on
