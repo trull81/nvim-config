@@ -28,3 +28,6 @@
 [submodule "bundle/deoplete-ruby"]
 	path = bundle/deoplete-ruby
 	url = https://github.com/fishbullet/deoplete-ruby
+[submodule "bundle/deoplete-jedi"]
+	path = bundle/deoplete-jedi
+	url = https://github.com/zchee/deoplete-jedi
