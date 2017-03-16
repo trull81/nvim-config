@@ -3,10 +3,7 @@ colorscheme guardian2
 " load plugins
 execute pathogen#infect()
 
-" ron is easier to read on vimdiff
-"if &diff
-"    colorscheme ron
-"endif
+call deoplete#enable()
 
 " syntax and indentation
 syntax on
