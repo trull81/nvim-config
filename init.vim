@@ -1,4 +1,4 @@
-colorscheme railscasts
+colorscheme guardian2
 
 " load plugins
 execute pathogen#infect()
