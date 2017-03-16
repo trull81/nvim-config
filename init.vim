@@ -13,6 +13,7 @@ syntax on
 filetype plugin indent on
 
 " general option
+set termguicolors
 set number autoindent smartindent ruler showcmd history=1000
 set noshowmode mouse=a laststatus=2 sw=2 ts=2 tw=80 et incsearch
 set cursorline wildmenu lazyredraw hlsearch listchars=eol:$
