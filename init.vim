@@ -2,6 +2,7 @@
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'fholgado/minibufexpl.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
