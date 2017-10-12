@@ -1,6 +1,12 @@
+" nocompatible ignored by Neovim but required when using Bundle with Vim
+set nocompatible
+filetype off
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.config/nvim/bundle/Vundle.vim
-call vundle#begin()
+
+" install plugins in bundle folder
+call vundle#begin('~/.config/nvim/bundle')
 
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'tpope/vim-fugitive'
