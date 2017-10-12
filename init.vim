@@ -1,9 +1,24 @@
-colorscheme guardian2
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.config/nvim/bundle/Vundle.vim
+call vundle#begin()
 
-" load plugins
-execute pathogen#infect()
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'nvie/vim-flake8'
+Plugin 'digitaltoad/vim-pug'
+Plugin 'scrooloose/nerdtree.git'
+Plugin 'majutsushi/tagbar'
+Plugin 'fatih/vim-go'
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'Shougo/deoplete-rct'
+Plugin 'zchee/deoplete-jedi'
+Plugin 'fishbullet/deoplete-ruby'
 
+call vundle#end()
 call deoplete#enable()
+
+colorscheme guardian2
 
 " syntax and indentation
 syntax on
