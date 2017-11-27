@@ -8,6 +8,7 @@ set rtp+=~/.config/nvim/bundle/Vundle.vim
 " install plugins in bundle folder
 call vundle#begin('~/.config/nvim/bundle')
 
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
@@ -25,7 +26,6 @@ Plugin 'fishbullet/deoplete-ruby'
 call vundle#end()
 call deoplete#enable()
 
-colorscheme guardian2
 
 " syntax and indentation
 syntax on
@@ -79,3 +79,5 @@ let g:airline#extensions#tabline#buffer_min_count = 2
 
 let g:deoplete#sources#jedi#show_docstring = 1
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+colorscheme guardian2
