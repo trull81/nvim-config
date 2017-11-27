@@ -52,6 +52,9 @@ nnoremap <leader><space> :nohlsearch<CR>
 " save session with ,s
 nnoremap <leader>s :mksession!<CR>
 
+" open current buffer in new tab
+:noremap tt :tab split<CR>
+
 " remove trailing spaces and tabs on saving
 autocmd BufWritePre * :%s/\s\+$//ec
 
@@ -79,5 +82,6 @@ let g:airline#extensions#tabline#buffer_min_count = 2
 
 let g:deoplete#sources#jedi#show_docstring = 1
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
 
 colorscheme guardian2
