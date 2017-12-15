@@ -22,6 +22,8 @@ Plugin 'Shougo/deoplete.nvim'
 Plugin 'Shougo/deoplete-rct'
 Plugin 'zchee/deoplete-jedi'
 Plugin 'fishbullet/deoplete-ruby'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 
 call vundle#end()
 call deoplete#enable()
@@ -55,6 +57,9 @@ nnoremap <leader>s :mksession!<CR>
 " open current buffer in new tab
 :noremap tt :tab split<CR>
 
+" fzf
+:nnoremap <leader>f :FZF<CR>
+
 " remove trailing spaces and tabs on saving
 autocmd BufWritePre * :%s/\s\+$//ec
 
@@ -84,6 +89,5 @@ let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#jedi#show_docstring = 1
 
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-
 
 colorscheme guardian2
