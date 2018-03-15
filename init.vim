@@ -35,9 +35,12 @@ filetype plugin indent on
 
 " general option
 set termguicolors
-set number autoindent smartindent ruler showcmd history=1000
+set number cindent ruler showcmd history=1000
 set noshowmode mouse=a laststatus=2 sw=2 ts=2 et incsearch
 set cursorline wildmenu lazyredraw hlsearch listchars=eol:$
+
+" do not trigger indentation of the current line when using #
+set cinkeys-=0# indentkeys-=0#
 
 " folding is a feature to reduce and expand code blocks
 set foldmethod=indent foldlevelstart=10 foldnestmax=10
