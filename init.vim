@@ -63,6 +63,9 @@ nnoremap <leader>s :mksession!<CR>
 " fzf
 :nnoremap <leader>f :FZF<CR>
 
+" NERDTree
+:nnoremap <leader>n :NERDTree<CR>
+
 " remove trailing spaces and tabs on saving
 autocmd BufWritePre * :%s/\s\+$//ec
 
