@@ -7,28 +7,45 @@ set rtp+=~/.config/nvim/bundle/Vundle.vim
 
 " install plugins in bundle folder
 call vundle#begin('~/.config/nvim/bundle')
+  " Vundle plugin manager
+  Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'fholgado/minibufexpl.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'nvie/vim-flake8'
-Plugin 'digitaltoad/vim-pug'
-Plugin 'francoiscabrol/ranger.vim'
-Plugin 'rbgrouleff/bclose.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'fatih/vim-go'
-Plugin 'Shougo/deoplete.nvim'
-Plugin 'Shougo/deoplete-rct'
-Plugin 'zchee/deoplete-jedi'
-Plugin 'fishbullet/deoplete-ruby'
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
+  " Buffer explorer
+  Plugin 'fholgado/minibufexpl.vim'
 
+  " Git commands wrapper
+  Plugin 'tpope/vim-fugitive'
+
+  " Status bar like powerline (but full vimscript)
+  Plugin 'vim-airline/vim-airline'
+  Plugin 'vim-airline/vim-airline-themes'
+
+  " Ranger integration
+  Plugin 'francoiscabrol/ranger.vim'
+  " Close buffer without closing window (required by Ranger)
+  Plugin 'rbgrouleff/bclose.vim'
+
+  " Show variables and methods and other components of source files
+  Plugin 'majutsushi/tagbar'
+
+  " Go integration
+  Plugin 'fatih/vim-go'
+
+  " Autocompletion backend
+  Plugin 'Shougo/deoplete.nvim'
+
+  " Python
+  Plugin 'zchee/deoplete-jedi'
+
+  " Ruby
+  Plugin 'Shougo/deoplete-rct'
+  Plugin 'fishbullet/deoplete-ruby'
+
+  " FZF
+  Plugin 'junegunn/fzf'
+  Plugin 'junegunn/fzf.vim'
 call vundle#end()
 call deoplete#enable()
-
 
 " syntax and indentation
 syntax on
@@ -59,13 +76,13 @@ nnoremap <leader><space> :nohlsearch<CR>
 nnoremap <leader>s :mksession!<CR>
 
 " open current buffer in new tab
-:noremap tt :tab split<CR>
+noremap tt :tab split<CR>
 
 " fzf
-:nnoremap <leader>f :FZF<CR>
+nnoremap <leader>f :FZF<CR>
 
 " ranger
-:nnoremap <leader>r :Ranger<CR>
+nnoremap <leader>r :Ranger<CR>
 
 " remove trailing spaces and tabs on saving
 autocmd BufWritePre * :%s/\s\+$//ec
@@ -97,6 +114,7 @@ let g:deoplete#sources#jedi#show_docstring = 1
 
 let g:ranger_map_keys = 0
 
+" close doc window (eg python jedi) when pressing ESC
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 colorscheme guardian2
