@@ -15,7 +15,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'nvie/vim-flake8'
 Plugin 'digitaltoad/vim-pug'
-Plugin 'scrooloose/nerdtree.git'
+Plugin 'francoiscabrol/ranger.vim'
+Plugin 'rbgrouleff/bclose.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'fatih/vim-go'
 Plugin 'Shougo/deoplete.nvim'
@@ -63,8 +64,8 @@ nnoremap <leader>s :mksession!<CR>
 " fzf
 :nnoremap <leader>f :FZF<CR>
 
-" NERDTree
-:nnoremap <leader>n :NERDTree<CR>
+" ranger
+:nnoremap <leader>r :Ranger<CR>
 
 " remove trailing spaces and tabs on saving
 autocmd BufWritePre * :%s/\s\+$//ec
@@ -93,6 +94,8 @@ let g:airline#extensions#tabline#buffer_min_count = 2
 
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#jedi#show_docstring = 1
+
+let g:ranger_map_keys = 0
 
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
