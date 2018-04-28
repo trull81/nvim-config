@@ -28,9 +28,6 @@ call vundle#begin('~/.config/nvim/bundle')
   " Show variables and methods and other components of source files
   Plugin 'majutsushi/tagbar'
 
-  " Go integration
-  Plugin 'fatih/vim-go'
-
   " Autocompletion backend
   Plugin 'Shougo/deoplete.nvim'
 
@@ -38,7 +35,6 @@ call vundle#begin('~/.config/nvim/bundle')
   Plugin 'zchee/deoplete-jedi'
 
   " Ruby
-  Plugin 'Shougo/deoplete-rct'
   Plugin 'fishbullet/deoplete-ruby'
 
   " FZF
