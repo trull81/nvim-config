@@ -77,6 +77,21 @@ noremap tt :tab split<CR>
 " fzf
 nnoremap <leader>f :FZF<CR>
 
+nnoremap <leader>h :History<CR>
+nnoremap <leader>b :Buffers<CR>
+
+nnoremap <leader>c :Commits<CR>
+nnoremap <leader>C :BCommits<CR>
+
+nnoremap <leader>l :Lines<CR>
+nnoremap <leader>L :BLines<CR>
+
+nnoremap <leader>t :Tags<CR>
+nnoremap <leader>T :BTags<CR>
+
+nnoremap <leader>m :Marks<CR>
+nnoremap <leader>w :Windows<CR>
+
 " ranger
 nnoremap <leader>r :Ranger<CR>
 
