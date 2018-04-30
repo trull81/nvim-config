@@ -111,7 +111,7 @@ autocmd BufWritePre * :%s/\s\+$//ec
 augroup filetype
   autocmd FileType python setlocal ts=4 sw=4
   autocmd FileType python set kp=:Run\ pydoc
-  autocmd FileType ruby set kp=:Run\ ri
+  autocmd FileType ruby set kp=:TRun\ ri
   autocmd FileType go setlocal ts=8 sw=8
   autocmd FileType markdown setlocal spell
 augroup end
@@ -150,7 +150,16 @@ function RunCmd(cmd)
   normal ggdd
 endfunction
 
+" run command inside a terminal
+function TermRunCmd(cmd)
+  " spawn the window with the terminal
+  silent exe "sp term://" . a:cmd
+  " enter insert mode (for interactive programs and pagers)
+  normal i
+endfunction
+
 " export RunCmd as :Run command
 command -nargs=1 Run :call RunCmd("<args>")
+command -nargs=1 TRun :call TermRunCmd("<args>")
 
 colorscheme guardian2
