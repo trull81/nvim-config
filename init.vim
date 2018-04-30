@@ -138,8 +138,6 @@ let g:ranger_map_keys = 0
 
 " run commands and display output in the preview window
 function RunCmd(cmd)
-  " disable auto commands
-  set eventignore=all
   " create the preview window
   silent exe "pedit " . a:cmd
   " move to the preview window
@@ -150,8 +148,6 @@ function RunCmd(cmd)
   exe "r! " . a:cmd
   " go the start and delete first blank line
   normal ggdd
-  "enable auto commands again
-  set eventignore=
 endfunction
 
 " export RunCmd as :Run command
