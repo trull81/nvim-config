@@ -40,6 +40,9 @@ call vundle#begin('~/.config/nvim/bundle')
   " FZF
   Plugin 'junegunn/fzf'
   Plugin 'junegunn/fzf.vim'
+
+  " Multiple cursor support (CTRL-n)
+  Plugin 'terryma/vim-multiple-cursors'
 call vundle#end()
 call deoplete#enable()
 
