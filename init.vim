@@ -98,6 +98,9 @@ nnoremap <leader>w :Windows<CR>
 " ranger
 nnoremap <leader>r :Ranger<CR>
 
+" close preview window
+nnoremap <leader>pc :pclose<CR>
+
 " this will bring terminal buffer in normal mode
 tnoremap <C-j>j <C-\><C-n>
 
@@ -133,7 +136,5 @@ let g:deoplete#sources#jedi#show_docstring = 1
 
 let g:ranger_map_keys = 0
 
-" close doc window (eg python jedi) when pressing ESC
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 colorscheme guardian2
