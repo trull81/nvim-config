@@ -50,11 +50,14 @@ call deoplete#enable()
 syntax on
 filetype plugin indent on
 
-" general option
+" general options
 set termguicolors
 set number cindent ruler showcmd history=1000
-set showmode mouse=a laststatus=2 sw=2 ts=2 et incsearch
+set showmode mouse=a laststatus=2 incsearch
 set cursorline wildmenu lazyredraw hlsearch listchars=eol:$
+
+" never insert tabs but display existing tabs with 8 spaces
+set shiftwidth=2 tabstop=8 expandtab
 
 " do not trigger indentation of the current line when using #
 set cinkeys-=0# indentkeys-=0#
@@ -109,10 +112,10 @@ autocmd BufWritePre * :%s/\s\+$//ec
 
 " specific filetype option
 augroup filetype
-  autocmd FileType python setlocal ts=4 sw=4
+  autocmd FileType python setlocal sw=4
   autocmd FileType python set kp=:Run\ pydoc
   autocmd FileType ruby set kp=:TRun\ ri
-  autocmd FileType go setlocal ts=8 sw=8
+  autocmd FileType go setlocal sw=8
   autocmd FileType markdown setlocal spell
 augroup end
 
