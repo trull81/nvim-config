@@ -110,13 +110,17 @@ tnoremap <C-j>j <C-\><C-n>
 " remove trailing spaces and tabs on saving
 autocmd BufWritePre * :%s/\s\+$//ec
 
-" specific filetype option
-augroup filetype
+" specific file type options
+augroup UserFileType
   autocmd FileType python setlocal sw=4
   autocmd FileType python set kp=:Run\ pydoc
   autocmd FileType ruby set kp=:TRun\ ri
   autocmd FileType go setlocal sw=8
   autocmd FileType markdown setlocal spell
+augroup end
+
+" specific file extension options
+augroup UserExtension
   autocmd BufNewFile,BufRead *.thor setlocal filetype=ruby
 augroup end
 
