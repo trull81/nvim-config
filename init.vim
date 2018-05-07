@@ -117,6 +117,7 @@ augroup filetype
   autocmd FileType ruby set kp=:TRun\ ri
   autocmd FileType go setlocal sw=8
   autocmd FileType markdown setlocal spell
+  autocmd BufNewFile,BufRead *.thor setlocal filetype=ruby
 augroup end
 
 " suggestion bar color
