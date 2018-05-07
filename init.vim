@@ -21,7 +21,7 @@ call vundle#begin('~/.config/nvim/bundle')
   Plugin 'vim-airline/vim-airline-themes'
 
   " Ranger integration
-  Plugin 'michelesr/ranger.vim'
+  Plugin 'francoiscabrol/ranger.vim'
   " Close buffer without closing window (required by Ranger)
   Plugin 'rbgrouleff/bclose.vim'
 
