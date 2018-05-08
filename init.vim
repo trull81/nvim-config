@@ -50,7 +50,7 @@ filetype plugin indent on
 " general options
 set termguicolors
 set number cindent ruler showcmd history=1000
-set showmode mouse=a laststatus=2 incsearch
+set showmode mouse=a laststatus=2 incsearch inccommand=split
 set cursorline wildmenu lazyredraw hlsearch listchars=eol:$
 
 " never insert tabs but display existing tabs with 8 spaces
