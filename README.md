@@ -4,6 +4,11 @@ My [neovim](https://neovim.io/) configuration.
 
 ## Installation
 
-Install Vundle (by cloning from the GitHub repo) in the `bundle` directory.
+Install Vundle:
+
+```bash
+$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim
+```
+
 Install plugins using `:PluginInstall`. For Deoplete, run
 `:UpdateRemotePlugins`.
