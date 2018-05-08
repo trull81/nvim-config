@@ -48,8 +48,7 @@ syntax on
 filetype plugin indent on
 
 " general options
-set termguicolors
-set number cindent ruler showcmd history=1000
+set number cindent ruler showcmd history=10000
 set showmode mouse=a laststatus=2 incsearch inccommand=split
 set cursorline wildmenu lazyredraw hlsearch listchars=eol:$
 
