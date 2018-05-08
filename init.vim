@@ -118,7 +118,7 @@ augroup end
 
 " specific file extension options
 augroup UserExtension
-  autocmd BufNewFile,BufRead *.thor setlocal filetype=ruby
+  autocmd BufNewFile,BufRead Thorfile\|*.thor setlocal filetype=ruby
 augroup end
 
 " suggestion bar color
