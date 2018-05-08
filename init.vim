@@ -25,9 +25,6 @@ call vundle#begin('~/.config/nvim/bundle')
   " Close buffer without closing window (required by Ranger)
   Plugin 'rbgrouleff/bclose.vim'
 
-  " Show variables and methods and other components of source files
-  Plugin 'majutsushi/tagbar'
-
   " Autocompletion backend
   Plugin 'Shougo/deoplete.nvim'
 
