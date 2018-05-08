@@ -168,4 +168,4 @@ endfunction
 command -nargs=1 Run :call RunCmd("<args>")
 command -nargs=1 TRun :call TermRunCmd("<args>")
 
-colorscheme guardian2
+colorscheme koehler
