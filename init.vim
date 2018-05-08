@@ -103,6 +103,7 @@ nnoremap <leader>pc :pclose<CR>
 
 " this will bring terminal buffer in normal mode
 tnoremap <C-j>j <C-\><C-n>
+tnoremap <C-j><C-j> <C-\><C-n>
 
 " remove trailing spaces and tabs on saving
 autocmd BufWritePre * :%s/\s\+$//ec
