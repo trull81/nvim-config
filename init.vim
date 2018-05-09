@@ -67,9 +67,6 @@ set foldmethod=indent foldlevelstart=10 foldnestmax=10
 " open/close code blocks with space
 nnoremap <space> za
 
-" comma is the mapleader
-let mapleader = ","
-
 " stop highlighting old search with ,<space>
 nnoremap <leader><space> :nohlsearch<CR>
 
