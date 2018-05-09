@@ -147,24 +147,18 @@ let g:ranger_replace_netrw = 1
 
 " run commands and display output in the preview window
 function RunCmd(cmd)
-  " create the preview window
   silent exe "pedit " . a:cmd
-  " move to the preview window
   wincmd P
-  " set the buffer type to nofile
   set buftype=nofile
   " run the command and read the output
   exe "r! " . a:cmd
   " go the start and delete first blank line
-  normal ggdd
+  1d
 endfunction
 
 " run command inside a terminal
 function TermRunCmd(cmd)
-  " spawn the window with the terminal
   silent exe "sp term://" . a:cmd
-  " enter insert mode (for interactive programs and pagers)
-  normal i
 endfunction
 
 " export RunCmd as :Run command
