@@ -40,6 +40,9 @@ call vundle#begin('~/.config/nvim/bundle')
 
   " Multiple cursor support (CTRL-n)
   Plugin 'terryma/vim-multiple-cursors'
+
+  " Colorscheme
+  Plugin 'joshdick/onedark.vim'
 call vundle#end()
 call deoplete#enable()
 
@@ -125,7 +128,7 @@ augroup end
 hi StatusLine ctermfg=15 ctermbg=0
 
 " airline options
-let g:airline_theme = 'powerlineish'
+let g:airline_theme = 'onedark'
 let g:airline_powerline_fonts = 1
 
 " tabline options
@@ -168,4 +171,12 @@ endfunction
 command -nargs=1 Run :call RunCmd("<args>")
 command -nargs=1 TRun :call TermRunCmd("<args>")
 
-colorscheme koehler
+set termguicolors
+
+let g:onedark_color_overrides = {
+\ "black": {"gui": "#1d1d2d", "cterm": "0", "cterm16": "0" },
+\ "comment_grey": {"gui": "#6d7d7d", "cterm": "0", "cterm16": "0" },
+\ "white": {"gui": "#bdcdcd", "cterm": "0", "cterm16": "0" },
+\}
+
+colorscheme onedark
