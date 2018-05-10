@@ -112,7 +112,7 @@ augroup UserFileType
   autocmd FileType python setlocal sw=4
   autocmd FileType python set kp=:Run\ pydoc
   autocmd FileType ruby set kp=:TRun\ ri
-  autocmd FileType go setlocal sw=8
+  autocmd FileType go setlocal sw=8 noet
   autocmd FileType markdown setlocal spell
 augroup end
 
