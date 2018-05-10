@@ -137,7 +137,6 @@ let g:airline#extensions#tabline#show_close_button = 0
 let g:airline#extensions#tabline#buffer_min_count = 2
 
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#jedi#show_docstring = 0
 
 let g:ranger_map_keys = 0
 let g:ranger_replace_netrw = 1
@@ -161,6 +160,9 @@ endfunction
 " export RunCmd as :Run command
 command -nargs=1 Run :call RunCmd("<args>")
 command -nargs=1 TRun :call TermRunCmd("<args>")
+
+" close doc window (eg python jedi) when pressing ESC
+autocmd InsertLeave * pclose
 
 set termguicolors
 
