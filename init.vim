@@ -38,6 +38,9 @@ call vundle#begin('~/.config/nvim/bundle')
 
   " Colorscheme
   Plugin 'joshdick/onedark.vim'
+
+  " Undo tree visualizer
+  Plugin 'mbbill/undotree'
 call vundle#end()
 call deoplete#enable()
 
